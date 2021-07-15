@@ -1,7 +1,7 @@
-import React from 'react';
+import { FC } from 'react';
 import { Button } from './components/atoms/button';
 import './index.scss';
 
-export const App: React.FC = () => {
+export const App: FC = () => {
   return <Button>Hello, world!</Button>;
 };

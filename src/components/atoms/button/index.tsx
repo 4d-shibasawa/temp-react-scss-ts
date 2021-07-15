@@ -1,11 +1,11 @@
-import React from 'react';
+import { FC, ButtonHTMLAttributes } from 'react';
 import { getModifiedClassNames } from 'ts/functions';
 
-interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
   color?: 'red' | 'green' | 'blue';
 }
 
-export const Button: React.FC<Props> = ({ color = 'green', ...props }) => {
+export const Button: FC<Props> = ({ color = 'green', ...props }) => {
   const modifiers = {
     disabled: props.disabled,
     [color]: true,
