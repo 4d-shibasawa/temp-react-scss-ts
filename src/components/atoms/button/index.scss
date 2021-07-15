@@ -1,0 +1,22 @@
+.a-button {
+  display: flex;
+  border: none;
+  @include sp {
+    width: 100%;
+  }
+
+  &--red {
+    background-color: pink;
+  }
+  &--green {
+    background-color: lightgreen;
+  }
+  &--blue {
+    background-color: skyblue;
+  }
+
+  &--disabled {
+    background-color: gray;
+    color: white;
+  }
+}

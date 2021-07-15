@@ -1,0 +1,27 @@
+@mixin lhCrop($line-height: 1.5) {
+  &::before {
+    content: '';
+    display: block;
+    height: 0;
+    width: 0;
+    margin-top: calc((1 - #{$line-height}) * 0.5em);
+  }
+  &::after {
+    content: '';
+    display: block;
+    height: 0;
+    width: 0;
+    margin-top: calc((1 - #{$line-height}) * 0.5em);
+  }
+}
+
+@mixin pc {
+  @media only screen and (min-width: #{$break-point + 1}px) {
+    @content;
+  }
+}
+@mixin sp {
+  @media only screen and (max-width: #{$break-point}px) {
+    @content;
+  }
+}
